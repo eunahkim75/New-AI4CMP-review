@@ -226,7 +226,7 @@ Here, we discuss two broad approaches to unsupervised learning for unlabelled da
 \subsubsection{Clustering}
 
 Imagine a set of measurements, raw and unprocessed, taken in different regions of a phase diagram.  The first question one may ask of this data set is how many phases are represented within.  This is an example of a situation where learning inherent groupings of the data points may help uncover common physical structure and correlations.  We begin with the idea of clustering, with the idea of mapping high-dimensional data to lower dimensions (typically two) in order to capture and visualize internal structure.
-
+\begin{enumerate}
 \item (Lei) Principal component analysis (PCA) is arguably the simplest dimension reduction technique. PCA projects the original data into a linear subspace which keeps most of the variation of the original data. For example, the PCA analysis of the Ising configuration collected at various temperatures shows that the greatest variation is in the magnetization, which corresponds to the first principal component. When project to the low dimensional space spanned by the first few principal components, human or clustering algorithms can identify clusters which corresponding to different phases in an unsupervised fashion. Besides being used for studying phase transitions, PCA was also used to extract low dimensional representation of atoms for identifying clustering~\cite{Atom2Vec2018}. 
 
 %ICA
@@ -245,7 +245,7 @@ Variational auto-encoders can be regarded as nonlinear generalizations of the PC
 Clearly, such a framework does not provide the same quantitive understanding as a direct
 Monte Carlo measurement of the order parameter, which sits on a solid bedrock of decades
 of statistical mechanics theory.
-
+\end{enumerate}
 
 
 \subsubsection{Generative Modelling}
