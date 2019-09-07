@@ -82,6 +82,14 @@ The field is rapidly developing, so any attempt at comprehensive review will be 
 Section~\ref{sec:ML} will present a pragmatic review of machine learning strategy using artificial neural networks (in short: deep learning).
 Section~\ref{sec:phase} will review how the problem of obtaining phase diagrams have been efficiently treated as a problem of classification. Section~\ref{sec:WF} will review how the problem of expressing competitive (i.e, candidate ground state) many-body quantum states have been tackled as a problem of generative modeling. Section~\ref{sec:data} will discuss how the analysis of big experimental data can be treated as a problem of hypothesis testing. As the subject area is rapidly developing and too young to have a conclusion, we will close the review by discussing key open issues and the topics that we did not have space to do justice by way of conclusion. 
 
+
+\section{Probabilistic formulation of machine learning}
+
+There can be a unified formulation of many task in machine learning in the probabilistic language. Reasoning in this rigorous and principled way helps demystify many folklores of machine learning. 
+Take the task of pattern recognition as an example. The goal is to make predictions certain attribute  $y$ of unseen data $\boldsymbol{x}$ based on a set of existing observations. However, instead of understanding this as function fitting $y=f(\boldsymbol{x})$, one can understand it as trying to model the conditional probability $p(y|\boldsymbol{x})$. When the attributes have discrete values, the task is called \emph{classification}. While for continuous attributes, this is called \emph{regression}. 
+
+Discriminative tasks such as pattern recognition is not the only form of learning. There is a whole class of learning called generative modeling. The goal of generative modeling is to \emph{represent}, \emph{learn} and \emph{sample} from high-dimensional probability distributions. Given data $\boldsymbol{x}$ and attribute $y$, generative models capture the joint probability distribution $p(\boldsymbol{x}, y)$. A well trained generative model can support discriminative tasks through the Bayes formula $p(y|\boldsymbol{x}) =p(\boldsymbol{x}, y)/p(\boldsymbol{x})$, where $p(\boldsymbol{x}) = \sum_{y} p(\boldsymbol{x}, y)$. Moreover, a trained model can estimate the probabilities on unseen data, which is useful for anomaly detection and generating new samples. 
+
 \section{The Machine Learning Strategy with Artificial Neural Network}
 \label{sec:ML}
 
